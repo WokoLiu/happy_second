@@ -3,6 +3,9 @@
 # @Author  : Yulong Liu
 # @File    : run.py
 
+from gevent import monkey
+monkey.patch_all()
+
 import os
 if not os.environ.get('CONF_ENVIRONMENT'):
     os.environ['CONF_ENVIRONMENT'] = 'product'
